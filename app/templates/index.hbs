@@ -1,0 +1,9 @@
+<p>This is a Github Explorer</p>
+<hr>
+
+<ul>
+  {{#each}}
+  <li>{{#link-to 'user' this.login}}{{name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+<p>Rendered on: {{renderedOn}}</p>

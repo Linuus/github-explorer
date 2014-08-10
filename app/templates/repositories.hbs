@@ -1,0 +1,20 @@
+<ol class="breadcrumb">
+  <li>{{#link-to 'index'}}Devs{{/link-to}}</li>
+  <li>{{#link-to 'user' user}}{{user.name}}{{/link-to}}</li>
+  <li class="active">Repositories</li>
+</ol>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  <tbody>
+    {{#each}}
+      <tr>
+        <td><h4>{{#link-to 'repository' this.name}}{{name}}{{/link-to}}</h4></td>
+        <td style="vertical-align:middle;">{{description}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

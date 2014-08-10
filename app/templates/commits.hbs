@@ -1,0 +1,21 @@
+<h4>Commits</h4>
+<table class="table table-striped">
+  <tbody>
+    {{#each}}
+      <tr>
+        <td style="width:120px;"><img {{bind-attr src=author.avatar_url}} style="width:100px;" /></td>
+        <td>
+          <h5>{{sha}}</h5>
+          <p>{{commit.message}}</p>
+          <hr/>
+          <p class="text-muted">{{from-date commit.committer.date}}</p>
+        </td>
+      </tr>
+    {{else}}
+      <tr>
+        <td><p class="text-muted">No commits yet!</p>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
